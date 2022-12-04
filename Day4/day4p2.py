@@ -30,9 +30,9 @@ for line in lines:
         min.append(float(nums[0]))
         max.append(float(nums[1]))
     #Do comparisons, each determines an overlap
-    if min[0] <= min[1] and max[0] >= max[1]:
+    if min[1] <= max[0] and min[0] <= min[1]:
         containment += 1
-    elif min[1] <= min[0] and max[1] >= max[0]:
+    elif min[0] <= max[1] and min[1] <= min[0]:
         containment += 1
 # Print answer
 print(containment)
